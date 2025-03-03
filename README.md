@@ -17,6 +17,12 @@ This is a customised lightweight environment to work with JPF (Java Path Finder)
 
   This will run the container mounting the current directory (`jpf-docker`) so as to make local files (Java sources, *.jpf files, binaries) accessible from the toolchain in the container (`javac` and `java`). 
 
+- From inside the container, create a `bin` directory:
+	
+	`jpf-workspace> mkdir bin`
+
+  (if the command fails because the directory is already present, it is ok)
+  
 - From inside the container, to compile sources in the local `src` directory:
 
   	`jpf-workspace> javac -classpath JPF/build/jpf-classes.jar -d bin <java src files>`  
