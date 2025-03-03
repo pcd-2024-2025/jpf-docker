@@ -15,9 +15,9 @@ This is a customised lightweight environment to work with JPF (Java Path Finder)
 
   `jpf-docker> docker run -it --rm -v $(pwd)/.:/jpf-workspace jpf-container`
 
-  This will run the container mounting the current directory (`jpf-docker`) so as to make local files (Java sources, *.jpf files, binaries) accessible from the toolchain in the container (`javac` and `java`). 
+  This will run the container mounting the current directory (`jpf-docker`) so as to make local files (Java sources, *.jpf files, binaries) accessible from the toolchain in the container (`javac` and `java`). Inside the container, the initial work directory of the shell is `jpf-workspace`.
 
-- From inside the container, create a `bin` directory:
+- From inside the container (`jpf-workspace` directory), create a `bin` directory:
 	
 	`jpf-workspace> mkdir bin`
 
